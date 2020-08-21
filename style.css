@@ -1,0 +1,49 @@
+:root {
+    --main-txt-color: #1D1D1B;
+    --grey-color: #D9D8D6;
+}
+
+
+body{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    background-color: var(--grey-color);
+}
+
+
+a{
+    text-decoration: none;
+    color: var(--main-txt-color);
+}
+
+a.dark-mode-toggle {
+    position: fixed;
+    bottom: 32px;
+    left: 32px;
+}
+
+a.menu-toggle {
+   margin: 0 auto;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 24px;
+    border: 1px solid black;
+    padding: 16px;
+}
+
+div.logo{
+    font-size: 90px;
+}
+
+div.plus{
+ 
+}
+
+
+@media (prefers-color-scheme: dark) {
+    body
+}
