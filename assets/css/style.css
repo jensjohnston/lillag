@@ -52,6 +52,12 @@ a.dark-mode-toggle {
     z-index: 2;
 }
 
+.menu-dropdown-overflow {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
 .menu-dropdown {
     border-bottom: 1px solid var(--text-color);
     border-right: 1px solid var(--text-color);
