@@ -2,7 +2,7 @@
     --main-color: #D9D8D6;
     --text-color: #1d1d1b;
     --highlight-color: #2727e6;
-}
+} 
 
 
 body.dark-mode{
@@ -90,6 +90,13 @@ a.dark-mode-toggle {
 
  .rotate {
     transform: rotate(225deg);
-    transform-origin: center;
-    
+    transform-origin: center;  
 } 
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-color: #D9D8D6;
+        --text-color: #1d1d1b;
+        --highlight-color: #2727e6;
+    }
+}
