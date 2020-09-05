@@ -8,7 +8,7 @@
 body.dark-mode{
     --main-color: #1d1d1b;
     --text-color: #d9d8d6;
-    --highkight-color: #2727e6;
+    --highlight-color: #2727e6;
 }
 
 
@@ -17,10 +17,11 @@ body{
     font-family: 'Work Sans', sans-serif;
     font-size: 16px;
     background-color: var(--main-color);
+    line-height: 1.5;
 }
 
 
-
+/*NAVIGATION*/
 .wrap-nav{
     display: flex;
     flex-direction: column;
@@ -29,6 +30,7 @@ body{
     left: 50%;
     transform: translateX(-50%);
     position: fixed;
+    
 }
 
 a{
@@ -50,6 +52,11 @@ a.dark-mode-toggle {
     border: 1px solid var(--text-color);
     padding: 16px;
     z-index: 2;
+    background-color: var(--main-color);
+}
+
+.logo{
+    color: var(--text-color);
 }
 
 .menu-dropdown-overflow {
@@ -68,10 +75,15 @@ a.dark-mode-toggle {
     transform: translate(0, -200px);
     transition: all 0.5s;
     transition-timing-function: ease-out;
+    background-color: var(--main-color);
 }
 
 .menu-dropdown:hover {
    background-color:red;
+}
+
+.plus svg {
+    fill: var(--text-color);
 }
 
 .hide {
@@ -85,6 +97,7 @@ a.dark-mode-toggle {
  pointer-events: auto;
  transition: all 0.5s;
  transition-timing-function: ease-out;
+ cursor: pointer;
 }
 
 
@@ -93,10 +106,104 @@ a.dark-mode-toggle {
     transform-origin: center;  
 } 
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --main-color: #D9D8D6;
-        --text-color: #1d1d1b;
-        --highlight-color: #2727e6;
+/*END OF NAVIGATION*/
+
+section.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+section.hero img {
+    /* max-height: 90vh; */
+}
+
+
+
+/*LIGHTBOX*/
+
+ div.lightbox { 
+    display: none;
+} 
+
+div.lightbox-background { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; background-color: #000000; opacity: 0.8;
     }
+    
+div.lightbox-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); background-color: white;
+    min-width: 80vw;
+    }
+
+.information {
+    display: flex;
+    flex-direction: column;
+}
+
+.information div.information-item {
+    padding-top: 16px;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.measure-narrow {
+    max-width: 25em;
+  } 
+
+  span.span-contact{
+    display:inline-block;
+    border-bottom:1px solid black;
+    padding-bottom:2px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+.modal-close {
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: white;
+    padding: 25px;
+    cursor: pointer;
+}
+
+/*END OF LIGHTBOX*/
+
+
+
+
+
+/*ABOUT*/
+
+div.phrase {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 25em;
+    font-size: 24px;
+}
+
+input.about {
+    position: absolute;
+    bottom: 50px;
+    left: 40%;
+    width: 20%;
 }
