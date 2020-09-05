@@ -56,7 +56,7 @@ a.dark-mode-toggle {
     border: 1px solid var(--text-color);
     padding: 16px;
     z-index: 2;
-    background-color: var(--main-color);
+    background-color: rgba(217, 216, 214, 0.5);
 }
 
 .logo{
@@ -79,11 +79,11 @@ a.dark-mode-toggle {
     transform: translate(0, -200px);
     transition: all 0.5s;
     transition-timing-function: ease-out;
-    background-color: var(--main-color);
+    background-color: rgba(217, 216, 214, 0.5);
 }
 
 .menu-dropdown:hover {
-   background-color:red;
+    background-color: rgba(217, 216, 214, 0.8);
 }
 
 .plus svg {
@@ -163,6 +163,7 @@ div.lightbox-content {
 
 .half-width {
     width: 50%;
+    /* border: 1px solid black; */
 }
 
 .measure-narrow {
@@ -202,8 +203,9 @@ div.phrase {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); */
-    max-width: 25em;
-    font-size: 24px;
+    max-width: 30em;
+    font-size: 36px;
+    /* text-align: center; */
 }
 
 input.about {
@@ -225,37 +227,43 @@ input.about {
 @keyframes intro-box {
     0% {
         background-color: #ffffff;
+        -webkit-filter: blur(0px);
+    }
+
+    50% {
+        -webkit-filter: blur(8px);
     }
 
     100% {
         background-color: transparent;
+        -webkit-filter: blur(8px);
     }
 }
 
 @keyframes grow-box {
     0% {
-        opacity: 0;
+        filter: blur(0px);
+        -webkit-filter: blur(0px);
     }
 
     20% {
-        opacity: 1;
+        
     }
 
-    40% {
-        width: 360px;
-        height: 200px;
+    50% {
+        opacity: 1;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
     }
 
     70% {
-        color: var(--text-color);
-        font-size: 80px;
+       
     }
 
     100% {
-        width: 100%;
-        height: 100%;
         border-color: transparent;
         color: transparent;
+        opacity: 0;
     }
 }
 
@@ -269,20 +277,22 @@ div.intro {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
+    background-color: #000000;
     pointer-events: none;
-    animation: intro-box 1s 4s both;
+    animation: intro-box 4s 2s both;
 }
 
 div.intro div.box {
-    width: 360px;
+    /* width: 360px;
     height: 200px;
-    border: 1px solid #000000;
+    border: 1px solid #000000; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 24px;
-    animation: grow-box 3s 2s both;
+    animation: grow-box 2s 1s both;
+    font-size: 36px;
+    color: #ffffff;
 }
 
 div.intro div.column-intro {
