@@ -40,44 +40,37 @@ $(document).ready(() => {
     
 });
 
+const slides = document.querySelector(".slideshow")
+const pagination = document.querySelectorAll(".pagination-circle")
+
+let current = 0
+let z = 10000000
+
+const images = slides.querySelectorAll("img")
+
+images.forEach(image => {
+    z = z - 1
+    image.style.zIndex = z
+})
+
+const slideshow = slides.addEventListener("click", function() {
+    z = z - 1
+
+    images[current].style.zIndex = z
+
+    current = current + 1
+    current = current % images.length
+
+})
 
 
+pagination.addEventListener("click", function() {
+    z = z - 1
+
+    images[current].style.zIndex = z
+
+    current = current + 1
+    current = current % images.length
+})
 
 
-
-
-
-
-
-// const mqDark = window.matchMedia("(prefers-color-scheme: dark)")
-
-// const darkModeToggle = document.querySelector("a.dark-mode-toggle")
-// const darkModeToggleText = document.querySelector("span")
-
-// const bodyTag = document.querySelector("body")
-
-// darkModeToggle.addEventListener("click", function () {
-//     bodyTag.classList.toggle("dark-mode");
-
-//     if (bodyTag.classList.contains("dark-mode")) {
-//         darkModeToggleText.innerHTML = "Light Mode"
-//     } else {
-//         darkModeToggleText.innerHTML = "Dark Mode"
-//     }
-// })
-
-
-// const updateDarkMode = function () {
-//     if (mqDark.matches) {
-//         bodyTag.classList.add("dark-mode")
-//         darkModeToggleTextinnerHTML= "Light mode"
-//     } else {
-//         darkModeToggleText.innerHTML = "Dark mode"
-//         bodyTag.classList.remove("dark-mode")
-//     }
-// }
-
-// updateDarkMode()
-// mqDark.addListener(function () {
-//     updateDarkMode()
-// })

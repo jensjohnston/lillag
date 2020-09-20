@@ -24,6 +24,10 @@ body{
     line-height: 1.5;
 }
 
+.border-right {
+    border-right: 1px solid black;
+}
+
 
 /*NAVIGATION*/
 .wrap-nav{
@@ -41,6 +45,11 @@ a{
     text-decoration: none;
     color: var(--text-color);
 } 
+
+.button {
+   padding: 8px 96px;
+   border: 1px solid black;
+}
 
 a.dark-mode-toggle {
     position: fixed;
@@ -140,17 +149,76 @@ div.lightbox-background {
     }
     
 div.lightbox-content {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     padding: 32px;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); background-color: white;
     min-width: 80vw;
+    min-height: 80vh;
     }
+ 
+.lightbox-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}  
+
+.lightbox-split .split-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#product-side {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.slideshow {
+    position: relative;
+    height: 590px;
+    width: 563px;
+}
+
+.slideshow img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 590px;
+    width: 563px;
+}
+
+/* Pagination links */
+.pagination a {
+    background-color: black;
+    color: black;
+    float: left;
+    padding: 6px 6px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: background-color .3s;
+    margin: 0px 4px;
+  }
+  
+  /* Style the active/current link */
+  .pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+
+.product-image-radiobutton {
+    display: flex;
+    flex-direction: column;
+}
 
 .information {
     display: flex;
@@ -164,6 +232,10 @@ div.lightbox-content {
 .half-width {
     width: 50%;
     /* border: 1px solid black; */
+}
+
+.product-image {
+    border-right: 1px solid black;
 }
 
 .measure-narrow {
@@ -300,3 +372,13 @@ div.intro div.column-intro {
     flex-direction: row;
     justify-content: space-between;
 }
+
+
+
+
+
+@media screen and (max-width: 660px) {
+    .wrap-nav{
+        width: 90%;   
+    }
+  }
