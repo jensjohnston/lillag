@@ -32,6 +32,9 @@ body{
     border-right: 1px solid black;
 }
 
+.sm-indent-bullets {
+    margin-left: 17px;
+}
 
 /*NAVIGATION*/
 .wrap-nav{
@@ -48,13 +51,23 @@ body{
 a{
     text-decoration: none;
     color: var(--text-color);
+    text-decoration: none;
+    transition: 1s;
 } 
 
 .button {
-   padding: 8px 96px;
-   border: 1px solid black;
+    padding: 8px 96px 8px 16px;
+    border: 1px solid black;
+    background-color: #ffffff;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
 }
 
+.button:hover {
+    opacity: 1;
+    transform: scale(1.02); 
+}
 
 
 a.dark-mode-toggle {
@@ -218,14 +231,6 @@ div.lightbox-content {
     background-color: black;
   }
   
-  /* Add a grey background color on mouse-over */
-  .pagination-circle a:hover:not(.active) {
-      background-color: #ddd;
-    }
-
-  .clicked {
-      background-color: #ddd;
-  }
 
 .information {
     display: flex;
@@ -385,7 +390,42 @@ div.intro div.column-intro {
 
 
 @media screen and (max-width: 660px) {
+
+
     .wrap-nav{
         width: 90%;   
+    }
+
+    section.product {
+        min-height: 60vh;
+    }
+
+    /*Lightbox modal*/
+    div.lightbox-content {
+
+    }
+
+    .lightbox-split {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lightbox-split .split-product {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .split-product img {
+        max-height: 300px;
+    }
+
+    .border {
+        border-bottom: 1px solid black;
+    }
+
+    .modal-close {
+        padding: 4px 8px 48px 48px;
+        z-index: 1000000000000;
     }
   }
