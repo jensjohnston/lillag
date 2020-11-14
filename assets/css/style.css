@@ -18,13 +18,17 @@ body.dark-mode{
 
 
 body{
-    font-family: Helvetica;
-    font-size: 16px;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+    font-size: 14px;
     background-color: var(--main-color);
     line-height: 1.5;
 }
 
 .border-right {
+    border-right: 1px solid black;
+}
+
+.border {
     border-right: 1px solid black;
 }
 
@@ -50,6 +54,8 @@ a{
    padding: 8px 96px;
    border: 1px solid black;
 }
+
+
 
 a.dark-mode-toggle {
     position: fixed;
@@ -121,7 +127,7 @@ a.dark-mode-toggle {
 
 /*END OF NAVIGATION*/
 
-section.hero {
+section.product {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,7 +159,6 @@ div.lightbox-content {
     flex-direction: row;
     align-items: center;
     justify-content: center; */
-    padding: 32px;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -164,13 +169,14 @@ div.lightbox-content {
  
 .lightbox-split {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1px 1fr;
 }  
 
 .lightbox-split .split-product {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 32px;
 }
 
 #product-side {
@@ -182,21 +188,17 @@ div.lightbox-content {
 
 .slideshow {
     position: relative;
-    height: 590px;
-    width: 563px;
 }
 
 .slideshow img{
     position: absolute;
     top: 0;
     left: 0;
-    height: 590px;
-    width: 563px;
+    max-height: 400px;
 }
 
 /* Pagination links */
 .pagination a {
-    background-color: black;
     color: black;
     float: left;
     padding: 6px 6px;
@@ -211,14 +213,19 @@ div.lightbox-content {
     background-color: dodgerblue;
     color: white;
   }
+
+  .pagination-circle{
+    background-color: black;
+  }
   
   /* Add a grey background color on mouse-over */
-  .pagination a:hover:not(.active) {background-color: #ddd;}
+  .pagination-circle a:hover:not(.active) {
+      background-color: #ddd;
+    }
 
-.product-image-radiobutton {
-    display: flex;
-    flex-direction: column;
-}
+  .clicked {
+      background-color: #ddd;
+  }
 
 .information {
     display: flex;

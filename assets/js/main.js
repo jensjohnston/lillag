@@ -65,12 +65,7 @@ const slideshow = slides.addEventListener("click", function() {
 
 
 pagination.addEventListener("click", function() {
-    z = z - 1
-
-    images[current].style.zIndex = z
-
-    current = current + 1
-    current = current % images.length
+    
 })
 
 
