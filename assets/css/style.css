@@ -402,7 +402,8 @@ div.intro div.column-intro {
 
     /*Lightbox modal*/
     div.lightbox-content {
-
+        min-width: 100vw;
+        height: 100vh;
     }
 
     .lightbox-split {
@@ -425,7 +426,11 @@ div.intro div.column-intro {
     }
 
     .modal-close {
-        padding: 4px 8px 48px 48px;
+        padding: 16px 16px 48px 48px;
         z-index: 1000000000000;
+    }
+
+    .modal-close path {
+        fill: #000000;
     }
   }
