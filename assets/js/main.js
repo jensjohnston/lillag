@@ -12,6 +12,10 @@ $(document).ready(() => {
         $("div.lightbox").fadeOut()
     })
 
+    $(".modal-close").on("click", function () { 
+        $("div.lightbox").fadeOut()
+    })
+
 
     //Navigation
     $('.plus').on('click', () => {
