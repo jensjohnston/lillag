@@ -23,25 +23,6 @@ $(document).ready(() => {
         $('.plus').toggleClass('rotate');
     })
 
-    //About
-    var phrases = [
-        "Lilla Gemaket",
-        "Lilla Gemaket is a creative collective",
-        "Lilla Gemaket is a creative collective founded in 2013.",
-        "Lilla Gemaket is a creative collective founded in 2013. With an interest for naturalistic beliefs",
-        "Lilla Gemaket is a creative collective founded in 2013. With an interest for naturalistic beliefs and tech innovation",
-        "Lilla Gemaket is a creative collective founded in 2013. With an interest for naturalistic beliefs and tech innovation we are exploring different fields to create what we believe",
-        "Lilla Gemaket is a creative collective founded in 2013. With an interest for naturalistic beliefs and tech innovation we are exploring different fields to create what we believe to be pieces for the next generation."
-    ]
-
-    $("input").on("input", function () {
-        var inputValue = $(this).val()
-
-        var phrase = phrases[inputValue]
-
-        $("div.phrase").html(phrase)
-    })
-    
 });
 
 const slides = document.querySelector(".slideshow")
