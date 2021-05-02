@@ -1,12 +1,4 @@
 $(document).ready(() => {
-
-
-    //Lightbox
-    $("a.pop-up").on("click", function (event) { 
-        $("div.lightbox").fadeIn()
-        
-        event.preventDefault() 
-    })
     
     $("div.lightbox-background").on("click", function () { 
         $("div.lightbox").fadeOut()
@@ -25,18 +17,26 @@ $(document).ready(() => {
 
 });
 
+
+
+
+const questions = document.querySelectorAll('section') 
+const lightbox = document.querySelector('.lightbox')
+
+questions.forEach((question) => {
+    const opener = question.querySelector('.image') 
+        opener.addEventListener('click', () => {
+            [...questions].filter(q => q !== question).forEach(q => q.classList.remove('opened'))
+            question.classList.toggle('opened')
+        })
+})
+
 const slides = document.querySelector(".slideshow")
 const pagination = document.querySelectorAll(".pagination-circle")
 
 let current = 0
 let z = 10000000
 
-const images = slides.querySelectorAll("img")
-
-images.forEach(image => {
-    z = z - 1
-    image.style.zIndex = z
-})
 
 const slideshow = slides.addEventListener("click", function() {
     z = z - 1

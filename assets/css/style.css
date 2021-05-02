@@ -495,4 +495,6 @@ div.intro div.column-intro {
 
     }    
 
-
+    section.opened div.lightbox {
+        display: block;
+    }

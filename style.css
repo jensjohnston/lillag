@@ -40,8 +40,6 @@ div.logo{
 }
 
 
-
-
-@media (prefers-color-scheme: dark) {
-    body
+.ligh.display-block {
+    display: block;
 }
