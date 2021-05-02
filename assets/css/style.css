@@ -485,12 +485,23 @@ div.intro div.column-intro {
 
   @media screen and (max-width: 660px) {
         .info {
+            margin-top: 64px;
             padding-top: 48px;
             padding-bottom: 48px;
         }
 
         .info-sub {
             grid-template-columns: 1fr;
+            min-height: unset;
+        }
+
+        .info-text {
+            order: 2;
+        }
+
+        .newsletter-wrapper {
+            display: flex;
+            flex-direction: column;
         }
 
     }    
@@ -498,3 +509,4 @@ div.intro div.column-intro {
     section.opened div.lightbox {
         display: block;
     }
+
