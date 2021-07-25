@@ -1,5 +1,6 @@
 $(document).ready(() => {
-    
+
+        
     $("div.lightbox-background").on("click", function () { 
         $("div.lightbox").fadeOut()
     })
@@ -25,7 +26,7 @@ const lightbox = document.querySelector('.lightbox')
 
 questions.forEach((question) => {
     const backDrop = document.querySelector('div.lightbox-background')
-    const modalClose = document.querySelector('div.lightbox-background')
+    const modalClose = document.querySelector('div.modal-close')
     const opener = question.querySelector('.image') 
 
         opener.addEventListener('click', () => {
